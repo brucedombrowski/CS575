@@ -130,3 +130,105 @@
 2012-11-20 05:32:49 Error: [MissingControllerException] Controller class UsersController could not be found.
 #0 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2012-11-21 17:45:50 Error: [MissingControllerException] Controller class UsersController could not be found.
+#0 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-11-21 17:46:53 Error: [MissingActionException] Action UsersController::login() could not be found.
+#0 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-11-21 17:47:19 Error: [MissingActionException] Action UsersController::login() could not be found.
+#0 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-11-21 17:47:21 Error: [MissingActionException] Action UsersController::login() could not be found.
+#0 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-11-21 17:48:31 Error: [MissingViewException] View file "C:\wamp\www\CS575\app\View\Users\login.ctp" is missing.
+#0 C:\wamp\www\CS575\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-11-21 18:06:28 Error: Fatal Error (4): syntax error, unexpected T_IS_EQUAL, expecting ')' in [C:\wamp\www\CS575\app\Controller\AppController.php, line 41]
+2012-11-21 18:06:28 Error: [FatalErrorException] syntax error, unexpected T_IS_EQUAL, expecting ')'
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 41, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\CS5...', 41, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-21 18:16:56 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\CS575\app\View\Users\add.ctp, line 9]
+2012-11-21 18:16:56 Error: [FatalErrorException] syntax error, unexpected ';'
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 9, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\CS5...', 9, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-21 18:30:21 Error: Fatal Error (4): syntax error, unexpected ':' in [C:\wamp\www\CS575\app\Model\User.php, line 95]
+2012-11-21 18:30:21 Error: [FatalErrorException] syntax error, unexpected ':'
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 95)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 95, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\CS5...', 95, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-21 18:38:50 Error: Fatal Error (4): syntax error, unexpected T_ELSE in [C:\wamp\www\CS575\app\View\Layouts\default.ctp, line 47]
+2012-11-21 18:38:50 Error: [FatalErrorException] syntax error, unexpected T_ELSE
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 47)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 47, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\CS5...', 47, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-21 18:40:06 Error: Fatal Error (4): syntax error, unexpected T_ELSE in [C:\wamp\www\CS575\app\View\Layouts\default.ctp, line 47]
+2012-11-21 18:40:06 Error: [FatalErrorException] syntax error, unexpected T_ELSE
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 47)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 47, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\CS5...', 47, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-21 18:40:07 Error: Fatal Error (4): syntax error, unexpected T_ELSE in [C:\wamp\www\CS575\app\View\Layouts\default.ctp, line 47]
+2012-11-21 18:40:07 Error: [FatalErrorException] syntax error, unexpected T_ELSE
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 47)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 47, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\CS5...', 47, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-21 18:52:30 Error: [NotFoundException] Invalid user
+#0 [internal function]: UsersController->view()
+#1 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-11-21 18:57:41 Error: [NotFoundException] Invalid role
+#0 [internal function]: RolesController->view()
+#1 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(RolesController), Array)
+#2 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(RolesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-11-21 19:00:00 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserRole.id' in 'field list'
+#0 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `UserRol...', Array)
+#2 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `UserRol...', Array, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `UserRol...', false)
+#4 C:\wamp\www\CS575\lib\Cake\Model\Model.php(2630): DboSource->read(Object(AppModel), Array)
+#5 C:\wamp\www\CS575\lib\Cake\Model\Model.php(2459): Model->find('all', Array)
+#6 C:\wamp\www\CS575\lib\Cake\Model\Model.php(2361): Model->_deleteLinks('7')
+#7 C:\wamp\www\CS575\app\Controller\RolesController.php(96): Model->delete()
+#8 [internal function]: RolesController->delete('7')
+#9 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(RolesController), Array)
+#10 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(RolesController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}

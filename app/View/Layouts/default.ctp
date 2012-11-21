@@ -40,6 +40,14 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	<div id="container">
 		<div id="header">
 			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+      <div style="text-align: right">
+      <?php if ($logged_in) { ?>
+        Welcome <?php echo $current_user['name']; ?>
+        <?php echo $this->Html->link('logout', array('controller' => 'users', 'action' => 'logout'));?>
+      <?php } else {?>
+        <?php echo $this->Html->link('login', array('controller' => 'users', 'action' => 'login'));?>
+      <?php } ?>
+      </div>
 		</div>
 		<div id="content">
 
