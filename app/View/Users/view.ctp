@@ -6,6 +6,11 @@
 			<?php echo h($user['User']['user_id']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Role'); ?></dt>
+		<dd>
+			<?php echo $this->Html->link($user['Role']['name'], array('controller' => 'roles', 'action' => 'view', $user['Role']['role_id'])); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Username'); ?></dt>
 		<dd>
 			<?php echo h($user['User']['username']); ?>
@@ -42,31 +47,43 @@
 		<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Roles'), array('controller' => 'roles', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Role'), array('controller' => 'roles', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Clients'), array('controller' => 'clients', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Client'), array('controller' => 'clients', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
 <div class="related">
-	<h3><?php echo __('Related Roles'); ?></h3>
-	<?php if (!empty($user['Role'])): ?>
+	<h3><?php echo __('Related Clients'); ?></h3>
+	<?php if (!empty($user['Client'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
-		<th><?php echo __('Role Id'); ?></th>
+		<th><?php echo __('Client Id'); ?></th>
+		<th><?php echo __('Manager Id'); ?></th>
 		<th><?php echo __('Name'); ?></th>
+		<th><?php echo __('Address'); ?></th>
+		<th><?php echo __('City'); ?></th>
+		<th><?php echo __('State'); ?></th>
+		<th><?php echo __('Zip'); ?></th>
 		<th><?php echo __('Created'); ?></th>
 		<th><?php echo __('Modified'); ?></th>
 		<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php
 		$i = 0;
-		foreach ($user['Role'] as $role): ?>
+		foreach ($user['Client'] as $client): ?>
 		<tr>
-			<td><?php echo $role['role_id']; ?></td>
-			<td><?php echo $role['name']; ?></td>
-			<td><?php echo $role['created']; ?></td>
-			<td><?php echo $role['modified']; ?></td>
+			<td><?php echo $client['client_id']; ?></td>
+			<td><?php echo $client['manager_id']; ?></td>
+			<td><?php echo $client['name']; ?></td>
+			<td><?php echo $client['address']; ?></td>
+			<td><?php echo $client['city']; ?></td>
+			<td><?php echo $client['state']; ?></td>
+			<td><?php echo $client['zip']; ?></td>
+			<td><?php echo $client['created']; ?></td>
+			<td><?php echo $client['modified']; ?></td>
 			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'roles', 'action' => 'view', $role['role_id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'roles', 'action' => 'edit', $role['role_id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'roles', 'action' => 'delete', $role['role_id']), null, __('Are you sure you want to delete # %s?', $role['role_id'])); ?>
+				<?php echo $this->Html->link(__('View'), array('controller' => 'clients', 'action' => 'view', $client['client_id'])); ?>
+				<?php echo $this->Html->link(__('Edit'), array('controller' => 'clients', 'action' => 'edit', $client['client_id'])); ?>
+				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'clients', 'action' => 'delete', $client['client_id']), null, __('Are you sure you want to delete # %s?', $client['client_id'])); ?>
 			</td>
 		</tr>
 	<?php endforeach; ?>
@@ -75,7 +92,7 @@
 
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('New Role'), array('controller' => 'roles', 'action' => 'add')); ?> </li>
+			<li><?php echo $this->Html->link(__('New Client'), array('controller' => 'clients', 'action' => 'add')); ?> </li>
 		</ul>
 	</div>
 </div>

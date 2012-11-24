@@ -232,3 +232,595 @@
 #11 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(RolesController), Object(CakeRequest), Object(CakeResponse))
 #12 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 {main}
+2012-11-22 00:41:15 Error: [MissingControllerException] Controller class TranscriptionistsController could not be found.
+#0 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-11-22 00:43:02 Error: Fatal Error (1): Class 'UsersController' not found in [C:\wamp\www\CS575\app\Controller\TranscriptionistsController.php, line 8]
+2012-11-22 00:43:02 Error: [FatalErrorException] Class 'UsersController' not found
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Class 'UsersCon...', 'C:\wamp\www\CS5...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'UsersCon...', 'C:\wamp\www\CS5...', 8, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'UsersCon...', 'C:\wamp\www\CS5...', 8, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-22 00:45:31 Error: Fatal Error (1): Class 'User' not found in [C:\wamp\www\CS575\app\Model\Transcriptionist.php, line 7]
+2012-11-22 00:45:31 Error: [FatalErrorException] Class 'User' not found
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Class 'User' no...', 'C:\wamp\www\CS5...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'User' no...', 'C:\wamp\www\CS5...', 7, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'User' no...', 'C:\wamp\www\CS5...', 7, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-22 00:46:42 Error: [MissingTableException] Table transcriptionists for model Transcriptionist was not found in datasource default.
+#0 C:\wamp\www\CS575\lib\Cake\Model\Model.php(3179): Model->setSource('transcriptionis...')
+#1 C:\wamp\www\CS575\lib\Cake\Model\Model.php(2630): Model->getDataSource()
+#2 C:\wamp\www\CS575\lib\Cake\Controller\Component\PaginatorComponent.php(173): Model->find('all', Array)
+#3 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(1081): PaginatorComponent->paginate(NULL, Array, Array)
+#4 C:\wamp\www\CS575\app\Controller\TranscriptionistsController.php(37): Controller->paginate()
+#5 [internal function]: TranscriptionistsController->index()
+#6 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(TranscriptionistsController), Array)
+#7 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(TranscriptionistsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-11-23 18:48:12 Error: [MissingControllerException] Controller class DictationAssignmentsController could not be found.
+#0 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-11-23 18:50:30 Error: [NotFoundException] Invalid transcription
+#0 [internal function]: TranscriptionsController->view()
+#1 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(TranscriptionsController), Array)
+#2 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(TranscriptionsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-11-23 19:02:39 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.role_id' in 'on clause'
+#0 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Client`...', Array)
+#2 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Client`...', Array, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Client`...', false)
+#4 C:\wamp\www\CS575\lib\Cake\Model\Model.php(2630): DboSource->read(Object(Client), Array)
+#5 C:\wamp\www\CS575\lib\Cake\Controller\Component\PaginatorComponent.php(173): Model->find('all', Array)
+#6 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(1081): PaginatorComponent->paginate(NULL, Array, Array)
+#7 C:\wamp\www\CS575\app\Controller\ClientsController.php(17): Controller->paginate()
+#8 [internal function]: ClientsController->index()
+#9 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2012-11-23 19:06:08 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'roles.role_id' in 'on clause'
+#0 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Client`...', Array)
+#2 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Client`...', Array, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Client`...', false)
+#4 C:\wamp\www\CS575\lib\Cake\Model\Model.php(2630): DboSource->read(Object(Client), Array)
+#5 C:\wamp\www\CS575\lib\Cake\Controller\Component\PaginatorComponent.php(173): Model->find('all', Array)
+#6 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(1081): PaginatorComponent->paginate(NULL, Array, Array)
+#7 C:\wamp\www\CS575\app\Controller\ClientsController.php(17): Controller->paginate()
+#8 [internal function]: ClientsController->index()
+#9 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2012-11-23 19:07:05 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Manager.role_id' in 'on clause'
+#0 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Client`...', Array)
+#2 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Client`...', Array, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Client`...', false)
+#4 C:\wamp\www\CS575\lib\Cake\Model\Model.php(2630): DboSource->read(Object(Client), Array)
+#5 C:\wamp\www\CS575\lib\Cake\Controller\Component\PaginatorComponent.php(173): Model->find('all', Array)
+#6 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(1081): PaginatorComponent->paginate(NULL, Array, Array)
+#7 C:\wamp\www\CS575\app\Controller\ClientsController.php(17): Controller->paginate()
+#8 [internal function]: ClientsController->index()
+#9 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2012-11-23 19:14:58 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.user_id' in 'on clause'
+#0 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Client`...', Array)
+#2 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Client`...', Array, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Client`...', false)
+#4 C:\wamp\www\CS575\lib\Cake\Model\Model.php(2630): DboSource->read(Object(Client), Array)
+#5 C:\wamp\www\CS575\lib\Cake\Model\Model.php(1516): Model->find('first', Array)
+#6 C:\wamp\www\CS575\app\Controller\ClientsController.php(74): Model->read(NULL, '1')
+#7 [internal function]: ClientsController->edit('1')
+#8 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#9 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-11-23 19:28:51 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Manager.role_id' in 'where clause'
+#0 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Manager...', Array)
+#2 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Manager...', Array, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Manager...', false)
+#4 C:\wamp\www\CS575\lib\Cake\Model\Model.php(2630): DboSource->read(Object(User), Array)
+#5 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(593): Model->find('all', Array)
+#6 C:\wamp\www\CS575\lib\Cake\Model\Model.php(784): DboSource->query('findAllByRoleId', Array, Object(User))
+#7 C:\wamp\www\CS575\app\Controller\ClientsController.php(50): Model->__call('findAllByRoleId', Array)
+#8 C:\wamp\www\CS575\app\Controller\ClientsController.php(50): User->findAllByRoleId(1)
+#9 [internal function]: ClientsController->add()
+#10 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#11 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2012-11-23 19:30:28 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'findListByUserId' at line 1
+#0 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('findListByUserI...', Array)
+#2 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('findListByUserI...', Array, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('findListByUserI...', Array, Array)
+#4 C:\wamp\www\CS575\lib\Cake\Model\Model.php(784): DboSource->query('findListByUserI...', Array, Object(User))
+#5 C:\wamp\www\CS575\app\Controller\ClientsController.php(50): Model->__call('findListByUserI...', Array)
+#6 C:\wamp\www\CS575\app\Controller\ClientsController.php(50): User->findListByUserId(5)
+#7 [internal function]: ClientsController->add()
+#8 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#9 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-11-23 19:37:41 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE, expecting ')' in [C:\wamp\www\CS575\app\Controller\AppController.php, line 39]
+2012-11-23 19:37:41 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE, expecting ')'
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 39)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 39, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\CS5...', 39, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 19:39:04 Error: Fatal Error (4): syntax error, unexpected T_STRING, expecting T_FUNCTION in [C:\wamp\www\CS575\app\Controller\AppController.php, line 56]
+2012-11-23 19:39:04 Error: [FatalErrorException] syntax error, unexpected T_STRING, expecting T_FUNCTION
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 56)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 56, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\CS5...', 56, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 19:41:17 Error: [MissingActionException] Action UsersController::home() could not be found.
+#0 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-11-23 19:43:15 Error: [MissingViewException] View file "C:\wamp\www\CS575\app\View\Users\home.ctp" is missing.
+#0 C:\wamp\www\CS575\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-11-23 19:44:50 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'index' at line 1
+#0 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('index', Array)
+#2 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('index', Array, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('index', Array, Array)
+#4 C:\wamp\www\CS575\lib\Cake\Model\Model.php(784): DboSource->query('index', Array, Object(User))
+#5 C:\wamp\www\CS575\app\Controller\UsersController.php(32): Model->__call('index', Array)
+#6 C:\wamp\www\CS575\app\Controller\UsersController.php(32): User->index()
+#7 [internal function]: UsersController->home()
+#8 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-11-23 19:46:00 Error: Fatal Error (1): Call to a member function index() on a non-object in [C:\wamp\www\CS575\app\Controller\UsersController.php, line 32]
+2012-11-23 19:46:00 Error: [FatalErrorException] Call to a member function index() on a non-object
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 32)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 32, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\CS5...', 32, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 19:46:29 Error: Fatal Error (4): syntax error, unexpected '(', expecting T_STRING or T_VARIABLE or '{' or '$' in [C:\wamp\www\CS575\app\Controller\UsersController.php, line 32]
+2012-11-23 19:46:29 Error: [FatalErrorException] syntax error, unexpected '(', expecting T_STRING or T_VARIABLE or '{' or '$'
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 32)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 32, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\CS5...', 32, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 19:46:49 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'index' at line 1
+#0 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('index', Array)
+#2 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('index', Array, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('index', Array, Array)
+#4 C:\wamp\www\CS575\lib\Cake\Model\Model.php(784): DboSource->query('index', Array, Object(User))
+#5 C:\wamp\www\CS575\app\Controller\UsersController.php(32): Model->__call('index', Array)
+#6 C:\wamp\www\CS575\app\Controller\UsersController.php(32): User->index()
+#7 [internal function]: UsersController->home()
+#8 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-11-23 19:49:29 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\CS575\app\Controller\UsersController.php, line 32]
+2012-11-23 19:49:29 Error: [FatalErrorException] syntax error, unexpected ';'
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 32)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 32, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\CS5...', 32, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 19:52:46 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserRole.id' in 'field list'
+#0 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `UserRol...', Array)
+#2 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `UserRol...', Array, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `UserRol...', false)
+#4 C:\wamp\www\CS575\lib\Cake\Model\Model.php(2630): DboSource->read(Object(AppModel), Array)
+#5 C:\wamp\www\CS575\lib\Cake\Model\Model.php(2459): Model->find('all', Array)
+#6 C:\wamp\www\CS575\lib\Cake\Model\Model.php(2361): Model->_deleteLinks('2')
+#7 C:\wamp\www\CS575\app\Controller\RolesController.php(96): Model->delete()
+#8 [internal function]: RolesController->delete('2')
+#9 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(RolesController), Array)
+#10 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(RolesController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2012-11-23 19:53:33 Error: [MissingActionException] Action UsersController::view 4() could not be found.
+#0 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-11-23 19:59:22 Error: [NotFoundException] Invalid user
+#0 [internal function]: UsersController->view('22')
+#1 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-11-23 20:05:19 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\CS575\app\Controller\UsersController.php, line 33]
+2012-11-23 20:05:19 Error: [FatalErrorException] syntax error, unexpected ';'
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 33)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 33, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\CS5...', 33, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 20:17:57 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\CS575\app\Controller\UsersController.php, line 32]
+2012-11-23 20:17:57 Error: [FatalErrorException] syntax error, unexpected ')'
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 32)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 32, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\CS5...', 32, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 20:32:39 Error: Fatal Error (4): syntax error, unexpected T_OBJECT_OPERATOR in [C:\wamp\www\CS575\app\Controller\UsersController.php, line 35]
+2012-11-23 20:32:39 Error: [FatalErrorException] syntax error, unexpected T_OBJECT_OPERATOR
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 35)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 35, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\CS5...', 35, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 20:32:47 Error: Fatal Error (1): Call to a member function getLatest() on a non-object in [C:\wamp\www\CS575\app\Controller\UsersController.php, line 35]
+2012-11-23 20:32:47 Error: [FatalErrorException] Call to a member function getLatest() on a non-object
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 35)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 35, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\CS5...', 35, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 20:34:21 Error: Fatal Error (1): Call to a member function getLatest() on a non-object in [C:\wamp\www\CS575\app\Controller\UsersController.php, line 35]
+2012-11-23 20:34:21 Error: [FatalErrorException] Call to a member function getLatest() on a non-object
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 35)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 35, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\CS5...', 35, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 20:34:22 Error: Fatal Error (1): Call to a member function getLatest() on a non-object in [C:\wamp\www\CS575\app\Controller\UsersController.php, line 35]
+2012-11-23 20:34:22 Error: [FatalErrorException] Call to a member function getLatest() on a non-object
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 35)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 35, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\CS5...', 35, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 20:34:26 Error: Fatal Error (1): Call to a member function getLatest() on a non-object in [C:\wamp\www\CS575\app\Controller\UsersController.php, line 35]
+2012-11-23 20:34:26 Error: [FatalErrorException] Call to a member function getLatest() on a non-object
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 35)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 35, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\CS5...', 35, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 20:34:42 Error: Fatal Error (4): syntax error, unexpected T_OBJECT_OPERATOR in [C:\wamp\www\CS575\app\Controller\UsersController.php, line 35]
+2012-11-23 20:34:42 Error: [FatalErrorException] syntax error, unexpected T_OBJECT_OPERATOR
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 35)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 35, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\CS5...', 35, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 20:35:10 Error: Fatal Error (1): Call to undefined function getLatest() in [C:\wamp\www\CS575\app\Controller\UsersController.php, line 35]
+2012-11-23 20:35:10 Error: [FatalErrorException] Call to undefined function getLatest()
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\wamp\www\CS5...', 35)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\wamp\www\CS5...', 35, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\wamp\www\CS5...', 35, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 20:50:24 Error: Fatal Error (4): syntax error, unexpected ')', expecting ']' in [C:\wamp\www\CS575\app\Model\User.php, line 150]
+2012-11-23 20:50:24 Error: [FatalErrorException] syntax error, unexpected ')', expecting ']'
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 150)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 150, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\CS5...', 150, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 20:50:35 Error: Fatal Error (4): syntax error, unexpected ')', expecting ']' in [C:\wamp\www\CS575\app\Model\User.php, line 150]
+2012-11-23 20:50:35 Error: [FatalErrorException] syntax error, unexpected ')', expecting ']'
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 150)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 150, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\CS5...', 150, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 20:50:45 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\CS575\app\Model\User.php, line 150]
+2012-11-23 20:50:45 Error: [FatalErrorException] syntax error, unexpected ')'
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 150)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 150, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\CS5...', 150, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 20:50:52 Error: Fatal Error (1): Call to a member function findbyName() on a non-object in [C:\wamp\www\CS575\app\Model\User.php, line 149]
+2012-11-23 20:50:52 Error: [FatalErrorException] Call to a member function findbyName() on a non-object
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 149)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 149, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\CS5...', 149, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 20:51:06 Error: Fatal Error (1): Call to a member function findByName() on a non-object in [C:\wamp\www\CS575\app\Model\User.php, line 149]
+2012-11-23 20:51:06 Error: [FatalErrorException] Call to a member function findByName() on a non-object
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 149)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 149, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\CS5...', 149, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 20:51:07 Error: Fatal Error (1): Call to a member function findByName() on a non-object in [C:\wamp\www\CS575\app\Model\User.php, line 149]
+2012-11-23 20:51:07 Error: [FatalErrorException] Call to a member function findByName() on a non-object
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 149)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 149, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\CS5...', 149, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 20:51:33 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.role_i_d' in 'where clause'
+#0 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `User`.`...', Array)
+#2 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 C:\wamp\www\CS575\lib\Cake\Model\Model.php(2630): DboSource->read(Object(User), Array)
+#5 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(593): Model->find('all', Array)
+#6 C:\wamp\www\CS575\lib\Cake\Model\Model.php(784): DboSource->query('findAllByRoleID', Array, Object(User))
+#7 C:\wamp\www\CS575\app\Model\User.php(150): Model->__call('findAllByRoleID', Array)
+#8 C:\wamp\www\CS575\app\Model\User.php(150): User->findAllByRoleID(NULL)
+#9 C:\wamp\www\CS575\app\Controller\UsersController.php(33): User->getAccountManagers()
+#10 [internal function]: UsersController->home()
+#11 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#12 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#13 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#14 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2012-11-23 20:51:44 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.role_id' in 'where clause'
+#0 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `User`.`...', Array)
+#2 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 C:\wamp\www\CS575\lib\Cake\Model\Model.php(2630): DboSource->read(Object(User), Array)
+#5 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(593): Model->find('all', Array)
+#6 C:\wamp\www\CS575\lib\Cake\Model\Model.php(784): DboSource->query('findAllByRoleId', Array, Object(User))
+#7 C:\wamp\www\CS575\app\Model\User.php(150): Model->__call('findAllByRoleId', Array)
+#8 C:\wamp\www\CS575\app\Model\User.php(150): User->findAllByRoleId(NULL)
+#9 C:\wamp\www\CS575\app\Controller\UsersController.php(33): User->getAccountManagers()
+#10 [internal function]: UsersController->home()
+#11 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#12 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#13 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#14 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2012-11-23 21:05:22 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\CS575\app\Model\User.php, line 149]
+2012-11-23 21:05:22 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 149)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 149, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\CS5...', 149, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 21:05:42 Error: [MissingTableException] Table user_roles for model UserRole was not found in datasource default.
+#0 C:\wamp\www\CS575\lib\Cake\Model\Model.php(3179): Model->setSource('user_roles')
+#1 C:\wamp\www\CS575\lib\Cake\Model\Model.php(1301): Model->getDataSource()
+#2 C:\wamp\www\CS575\lib\Cake\Model\Model.php(847): Model->schema()
+#3 C:\wamp\www\CS575\lib\Cake\Model\Model.php(872): Model->__isset('UserRole')
+#4 C:\wamp\www\CS575\lib\Cake\Model\Model.php(3247): Model->__get('UserRole')
+#5 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(1596): Model->joinModel('UserRole', Array)
+#6 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(1071): DboSource->generateAssociationQuery(Object(Role), Object(User), 'hasAndBelongsTo...', 'User', Array, Array, false, NULL)
+#7 C:\wamp\www\CS575\lib\Cake\Model\Model.php(2630): DboSource->read(Object(Role), Array)
+#8 C:\wamp\www\CS575\app\Model\User.php(149): Model->find('all', Array)
+#9 C:\wamp\www\CS575\app\Controller\UsersController.php(33): User->getAccountManagers()
+#10 [internal function]: UsersController->home()
+#11 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#12 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#13 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#14 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2012-11-23 21:07:57 Error: Fatal Error (1): Call to a member function getAccountManagers() on a non-object in [C:\wamp\www\CS575\app\Controller\UsersController.php, line 33]
+2012-11-23 21:07:57 Error: [FatalErrorException] Call to a member function getAccountManagers() on a non-object
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 33)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 33, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\CS5...', 33, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 21:07:58 Error: Fatal Error (1): Call to a member function getAccountManagers() on a non-object in [C:\wamp\www\CS575\app\Controller\UsersController.php, line 33]
+2012-11-23 21:07:58 Error: [FatalErrorException] Call to a member function getAccountManagers() on a non-object
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 33)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 33, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\CS5...', 33, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 21:08:22 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\CS575\app\Model\Role.php, line 27]
+2012-11-23 21:08:22 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 27)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 27, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\CS5...', 27, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 21:08:46 Error: Fatal Error (1): Call to a member function getAccountManagers() on a non-object in [C:\wamp\www\CS575\app\Controller\UsersController.php, line 33]
+2012-11-23 21:08:46 Error: [FatalErrorException] Call to a member function getAccountManagers() on a non-object
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 33)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 33, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\CS5...', 33, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 21:09:02 Error: Fatal Error (1): Call to a member function getAccountManagers() on a non-object in [C:\wamp\www\CS575\app\Controller\UsersController.php, line 34]
+2012-11-23 21:09:02 Error: [FatalErrorException] Call to a member function getAccountManagers() on a non-object
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 34)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\CS5...', 34, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\CS5...', 34, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 21:21:34 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Role.user_id' in 'where clause'
+#0 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Role`.`...', Array)
+#2 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Role`.`...', Array, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Role`.`...', false)
+#4 C:\wamp\www\CS575\lib\Cake\Model\Model.php(2630): DboSource->read(Object(Role), Array)
+#5 C:\wamp\www\CS575\app\Model\User.php(160): Model->find('all', Array)
+#6 C:\wamp\www\CS575\app\Controller\UsersController.php(36): User->isAccountManager('5')
+#7 [internal function]: UsersController->home()
+#8 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-11-23 21:21:50 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.user_id' in 'where clause'
+#0 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Role`.`...', Array)
+#2 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Role`.`...', Array, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Role`.`...', false)
+#4 C:\wamp\www\CS575\lib\Cake\Model\Model.php(2630): DboSource->read(Object(Role), Array)
+#5 C:\wamp\www\CS575\app\Model\User.php(160): Model->find('all', Array)
+#6 C:\wamp\www\CS575\app\Controller\UsersController.php(36): User->isAccountManager('5')
+#7 [internal function]: UsersController->home()
+#8 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-11-23 21:34:35 Error: Fatal Error (4): syntax error, unexpected T_PUBLIC in [C:\wamp\www\CS575\app\Controller\UsersController.php, line 46]
+2012-11-23 21:34:35 Error: [FatalErrorException] syntax error, unexpected T_PUBLIC
+#0 C:\wamp\www\CS575\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 46)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\CS5...', 46, Array)
+#2 C:\wamp\www\CS575\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\CS5...', 46, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-11-23 21:47:27 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Role.user_id' in 'on clause'
+#0 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `User`.`...', Array)
+#2 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 C:\wamp\www\CS575\lib\Cake\Model\Model.php(2630): DboSource->read(Object(User), Array)
+#5 C:\wamp\www\CS575\lib\Cake\Controller\Component\PaginatorComponent.php(173): Model->find('all', Array)
+#6 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(1081): PaginatorComponent->paginate(NULL, Array, Array)
+#7 C:\wamp\www\CS575\app\Controller\UsersController.php(47): Controller->paginate()
+#8 [internal function]: UsersController->index()
+#9 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#10 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2012-11-23 21:58:39 Error: [MissingActionException] Action Users::home() could not be found.
+#0 C:\wamp\www\CS575\lib\Cake\Controller\Scaffold.php(151): Scaffold->_scaffold(Object(CakeRequest))
+#1 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(530): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(489): Controller->_getScaffold(Object(CakeRequest))
+#3 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#4 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-11-23 22:07:57 Error: [MissingControllerException] Controller class DictationAssignmentsController could not be found.
+#0 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-11-23 22:08:02 Error: [MissingControllerException] Controller class DictationAssignmentsController could not be found.
+#0 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-11-23 22:13:34 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Account Manager.user_id' in 'field list'
+#0 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Account...', Array)
+#2 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Account...', Array, Array)
+#3 C:\wamp\www\CS575\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Account...', false)
+#4 C:\wamp\www\CS575\lib\Cake\Model\Model.php(2630): DboSource->read(Object(User), Array)
+#5 C:\wamp\www\CS575\lib\Cake\Controller\Scaffold.php(273): Model->find('list')
+#6 C:\wamp\www\CS575\lib\Cake\Controller\Scaffold.php(395): Scaffold->_scaffoldSave(Object(CakeRequest), 'add')
+#7 C:\wamp\www\CS575\lib\Cake\Controller\Scaffold.php(151): Scaffold->_scaffold(Object(CakeRequest))
+#8 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(530): Scaffold->__construct(Object(DictationAssignmentsController), Object(CakeRequest))
+#9 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(489): Controller->_getScaffold(Object(CakeRequest))
+#10 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(DictationAssignmentsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2012-11-23 22:29:01 Error: [NotFoundException] Invalid dictation assignment
+#0 [internal function]: DictationAssignmentsController->edit('0')
+#1 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(DictationAssignmentsController), Array)
+#2 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(DictationAssignmentsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-11-23 22:29:12 Error: [NotFoundException] Invalid dictation assignment
+#0 [internal function]: DictationAssignmentsController->edit('0')
+#1 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(DictationAssignmentsController), Array)
+#2 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(DictationAssignmentsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-11-23 22:29:53 Error: [NotFoundException] Invalid dictation assignment
+#0 [internal function]: DictationAssignmentsController->edit('0')
+#1 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(DictationAssignmentsController), Array)
+#2 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(DictationAssignmentsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-11-23 22:29:55 Error: [NotFoundException] Invalid dictation assignment
+#0 [internal function]: DictationAssignmentsController->edit('1')
+#1 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(DictationAssignmentsController), Array)
+#2 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(DictationAssignmentsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-11-23 22:30:00 Error: [NotFoundException] Invalid dictation assignment
+#0 [internal function]: DictationAssignmentsController->edit('5')
+#1 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(DictationAssignmentsController), Array)
+#2 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(DictationAssignmentsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-11-23 22:30:04 Error: [NotFoundException] Invalid dictation assignment
+#0 [internal function]: DictationAssignmentsController->edit('3')
+#1 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(DictationAssignmentsController), Array)
+#2 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(DictationAssignmentsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-11-23 22:32:22 Error: [NotFoundException] Invalid dictation assignment
+#0 [internal function]: DictationAssignmentsController->edit('0')
+#1 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(DictationAssignmentsController), Array)
+#2 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(DictationAssignmentsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-11-23 22:33:46 Error: [NotFoundException] Invalid dictation assignment
+#0 [internal function]: DictationAssignmentsController->edit('1')
+#1 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(DictationAssignmentsController), Array)
+#2 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(DictationAssignmentsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

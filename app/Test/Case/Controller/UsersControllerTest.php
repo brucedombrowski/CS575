@@ -13,7 +13,12 @@ class UsersControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.user'
+		'app.user',
+		'app.role',
+		'app.client',
+		'app.dictation',
+		'app.transcription',
+		'app.dictation_assignment'
 	);
 
 /**
@@ -54,46 +59,6 @@ class UsersControllerTest extends ControllerTestCase {
  * @return void
  */
 	public function testDelete() {
-	}
-
-/**
- * testAdminIndex method
- *
- * @return void
- */
-	public function testAdminIndex() {
-	}
-
-/**
- * testAdminView method
- *
- * @return void
- */
-	public function testAdminView() {
-	}
-
-/**
- * testAdminAdd method
- *
- * @return void
- */
-	public function testAdminAdd() {
-	}
-
-/**
- * testAdminEdit method
- *
- * @return void
- */
-	public function testAdminEdit() {
-	}
-
-/**
- * testAdminDelete method
- *
- * @return void
- */
-	public function testAdminDelete() {
 	}
 
 }

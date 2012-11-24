@@ -3,10 +3,11 @@
 	<fieldset>
 		<legend><?php echo __('Add User'); ?></legend>
 	<?php
+		echo $this->Form->input('role_id');
 		echo $this->Form->input('username');
 		echo $this->Form->input('password');
+    echo $this->Form->input('password_confirm');
 		echo $this->Form->input('name');
-		echo $this->Form->input('Role');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
@@ -18,5 +19,7 @@
 		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?></li>
 		<li><?php echo $this->Html->link(__('List Roles'), array('controller' => 'roles', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Role'), array('controller' => 'roles', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Clients'), array('controller' => 'clients', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Client'), array('controller' => 'clients', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

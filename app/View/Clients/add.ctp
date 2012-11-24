@@ -8,6 +8,7 @@
 		echo $this->Form->input('city');
 		echo $this->Form->input('state');
 		echo $this->Form->input('zip');
+		echo $this->Form->input('manager_id');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
@@ -17,6 +18,8 @@
 	<ul>
 
 		<li><?php echo $this->Html->link(__('List Clients'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Manager'), array('controller' => 'users', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Dictations'), array('controller' => 'dictations', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Dictation'), array('controller' => 'dictations', 'action' => 'add')); ?> </li>
 	</ul>

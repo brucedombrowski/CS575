@@ -41,6 +41,11 @@
 			<?php echo h($client['Client']['modified']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Manager'); ?></dt>
+		<dd>
+			<?php echo $this->Html->link($client['Manager']['name'], array('controller' => 'users', 'action' => 'view', $client['Manager']['user_id'])); ?>
+			&nbsp;
+		</dd>
 	</dl>
 </div>
 <div class="actions">
@@ -50,6 +55,8 @@
 		<li><?php echo $this->Form->postLink(__('Delete Client'), array('action' => 'delete', $client['Client']['client_id']), null, __('Are you sure you want to delete # %s?', $client['Client']['client_id'])); ?> </li>
 		<li><?php echo $this->Html->link(__('List Clients'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Client'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Manager'), array('controller' => 'users', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Dictations'), array('controller' => 'dictations', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Dictation'), array('controller' => 'dictations', 'action' => 'add')); ?> </li>
 	</ul>

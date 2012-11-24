@@ -76,21 +76,10 @@ class Role extends AppModel {
  *
  * @var array
  */
-	public $hasAndBelongsToMany = array(
+	public $hasMany = array(
 		'User' => array(
 			'className' => 'User',
-			'joinTable' => 'user_roles',
 			'foreignKey' => 'role_id',
-			'associationForeignKey' => 'user_id',
-			'unique' => 'keepExisting',
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'finderQuery' => '',
-			'deleteQuery' => '',
-			'insertQuery' => ''
 		)
 	);
 

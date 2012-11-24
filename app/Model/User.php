@@ -85,27 +85,50 @@ class User extends AppModel {
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
- * hasAndBelongsToMany associations
+ * hasOne associations
  *
  * @var array
  */
-	public $hasAndBelongsToMany = array(
+	public $belongsTo = array(
 		'Role' => array(
 			'className' => 'Role',
-			'joinTable' => 'user_roles',
-			'foreignKey' => 'user_id',
-			'associationForeignKey' => 'role_id',
-			'unique' => 'keepExisting',
+      'foreignKey' => 'role_id'
+		)
+	);
+  
+/**
+ * hasMany associations
+ *
+ * @var array
+ */
+	public $hasMany = array(
+		'Client' => array(
+			'className' => 'Client',
+			'foreignKey' => 'manager_id',
+			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
 			'order' => '',
 			'limit' => '',
 			'offset' => '',
+			'exclusive' => '',
 			'finderQuery' => '',
-			'deleteQuery' => '',
-			'insertQuery' => ''
+			'counterQuery' => ''
+		),
+    'Assignments' => array(
+			'className' => 'DictationAssignment',
+			'foreignKey' => 'user_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
 		)
-	);  
+	);    
   
   public function matchPasswords($data) {
     if ($data['password'] == $this->data['User']['password_confirm']) {
@@ -121,4 +144,17 @@ class User extends AppModel {
     }
     return true;
   }
+  
+  public function getAccountManagers() {
+  
+    return $this->Role->find('all', array('conditions'=>array('Role.name'=>'Account Manager')));
+    
+  }
+  
+  public function getAdministrators() {
+  
+    return $this->Role->find('all', array('conditions'=>array('Role.name'=>'Administrator')));
+    
+  }  
+  
 }

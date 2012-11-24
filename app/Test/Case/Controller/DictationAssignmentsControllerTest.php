@@ -1,11 +1,11 @@
 <?php
-App::uses('ClientsController', 'Controller');
+App::uses('DictationAssignmentsController', 'Controller');
 
 /**
- * ClientsController Test Case
+ * DictationAssignmentsController Test Case
  *
  */
-class ClientsControllerTest extends ControllerTestCase {
+class DictationAssignmentsControllerTest extends ControllerTestCase {
 
 /**
  * Fixtures
@@ -13,13 +13,13 @@ class ClientsControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
+		'app.dictation_assignment',
+		'app.dictation',
 		'app.client',
 		'app.user',
 		'app.role',
-		'app.user_role',
-		'app.dictation',
 		'app.transcription',
-		'app.qa_assignment'
+		'app.dictation_assignment'
 	);
 
 /**

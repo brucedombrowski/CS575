@@ -3,6 +3,7 @@
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('user_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('role_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('username'); ?></th>
 			<th><?php echo $this->Paginator->sort('password'); ?></th>
 			<th><?php echo $this->Paginator->sort('name'); ?></th>
@@ -14,6 +15,9 @@
 	foreach ($users as $user): ?>
 	<tr>
 		<td><?php echo h($user['User']['user_id']); ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($user['Role']['name'], array('controller' => 'roles', 'action' => 'view', $user['Role']['role_id'])); ?>
+		</td>
 		<td><?php echo h($user['User']['username']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['password']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['name']); ?>&nbsp;</td>
@@ -48,5 +52,7 @@
 		<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('List Roles'), array('controller' => 'roles', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Role'), array('controller' => 'roles', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Clients'), array('controller' => 'clients', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Client'), array('controller' => 'clients', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

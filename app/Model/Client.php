@@ -19,7 +19,7 @@ class Client extends AppModel {
  *
  * @var string
  */
-	public $displayField = 'name';
+	public $displayField = 'name'; 
 
 /**
  * Validation rules
@@ -30,7 +30,17 @@ class Client extends AppModel {
 		'client_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
+				'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+    'manager_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -40,7 +50,7 @@ class Client extends AppModel {
 		'name' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -50,7 +60,7 @@ class Client extends AppModel {
 		'address' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -60,7 +70,7 @@ class Client extends AppModel {
 		'city' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -70,7 +80,7 @@ class Client extends AppModel {
 		'state' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -80,7 +90,7 @@ class Client extends AppModel {
 		'zip' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -90,6 +100,20 @@ class Client extends AppModel {
 	);
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
+
+/**
+ * belongsTo associations
+ *
+ * @var array
+ */
+	public $belongsTo = array(
+		'Manager' => array(
+			'className' => 'User',
+			'foreignKey' => 'manager_id',
+			'conditions' => '',
+		)
+	);
+
 
 /**
  * hasMany associations
@@ -111,5 +135,7 @@ class Client extends AppModel {
 			'counterQuery' => ''
 		)
 	);
+  
+  
 
 }

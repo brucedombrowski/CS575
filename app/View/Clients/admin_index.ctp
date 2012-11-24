@@ -10,6 +10,7 @@
 			<th><?php echo $this->Paginator->sort('zip'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('modified'); ?></th>
+			<th><?php echo $this->Paginator->sort('manager_id'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php
@@ -23,6 +24,9 @@
 		<td><?php echo h($client['Client']['zip']); ?>&nbsp;</td>
 		<td><?php echo h($client['Client']['created']); ?>&nbsp;</td>
 		<td><?php echo h($client['Client']['modified']); ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($client['Manager']['name'], array('controller' => 'users', 'action' => 'view', $client['Manager']['user_id'])); ?>
+		</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $client['Client']['client_id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $client['Client']['client_id'])); ?>
@@ -51,6 +55,8 @@
 	<ul>
 		<li><?php echo $this->Html->link(__('New Client'), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Manager'), array('controller' => 'users', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Dictations'), array('controller' => 'dictations', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Dictation'), array('controller' => 'dictations', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

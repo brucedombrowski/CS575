@@ -1,27 +1,25 @@
-a<?php
+<?php
 App::uses('AppModel', 'Model');
 /**
- * Dictation Model
+ * DictationAssignment Model
  *
  * @property Dictation $Dictation
- * @property Client $Client
- * @property Transcription $Transcription
  */
-class Dictation extends AppModel {
+class DictationAssignment extends AppModel {
 
 /**
  * Primary key field
  *
  * @var string
  */
-	public $primaryKey = 'dictation_id';
+	public $primaryKey = 'dictation_assignment_id';
 
 /**
  * Display field
  *
  * @var string
  */
-	public $displayField = 'name';
+	public $displayField = 'dictation_assignment_id';
 
 /**
  * Validation rules
@@ -29,6 +27,16 @@ class Dictation extends AppModel {
  * @var array
  */
 	public $validate = array(
+		'dictation_assignment_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
 		'dictation_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
@@ -39,7 +47,7 @@ class Dictation extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'client_id' => array(
+		'account_manager_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -49,9 +57,9 @@ class Dictation extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'name' => array(
-			'notempty' => array(
-				'rule' => array('notempty'),
+		'transcriptionist_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -59,9 +67,9 @@ class Dictation extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'location' => array(
-			'notempty' => array(
-				'rule' => array('notempty'),
+		'valid' => array(
+			'boolean' => array(
+				'rule' => array('boolean'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -99,56 +107,26 @@ class Dictation extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'Client' => array(
-			'className' => 'Client',
-			'foreignKey' => 'client_id',
+		'Dictation' => array(
+			'className' => 'Dictation',
+			'foreignKey' => 'dictation_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-		)
-	);
-
-/**
- * hasOne associations
- *
- * @var array
- */
-	public $hasOne = array(
-		'Transcription' => array(
-			'className' => 'Transcription',
-			'foreignKey' => 'dictation_id',
-			'dependent' => false,
+		),
+    'AccountManager' => array(
+			'className' => 'User',
+			'foreignKey' => 'account_manager_id',
 			'conditions' => '',
 			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)
-	);
-
-/**
- * hasOne associations
- *
- * @var array
- */
-	public $hasMany = array(
-		'Assignments' => array(
-			'className' => 'Dictation_assignment',
-			'foreignKey' => 'dictation_id',
-			'dependent' => false,
+			'order' => ''
+		),
+    'Transcriptionist' => array(
+			'className' => 'User',
+			'foreignKey' => 'transcriptionist_id',
 			'conditions' => '',
 			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)
-	);  
-    
-
+			'order' => ''
+		),
+	);
 }

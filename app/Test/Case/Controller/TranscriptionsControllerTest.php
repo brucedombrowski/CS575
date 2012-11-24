@@ -17,8 +17,8 @@ class TranscriptionsControllerTest extends ControllerTestCase {
 		'app.dictation',
 		'app.client',
 		'app.user',
-		'app.clients_user',
-		'app.qa_assignment'
+		'app.role',
+		'app.user_role'
 	);
 
 /**
@@ -59,46 +59,6 @@ class TranscriptionsControllerTest extends ControllerTestCase {
  * @return void
  */
 	public function testDelete() {
-	}
-
-/**
- * testAdminIndex method
- *
- * @return void
- */
-	public function testAdminIndex() {
-	}
-
-/**
- * testAdminView method
- *
- * @return void
- */
-	public function testAdminView() {
-	}
-
-/**
- * testAdminAdd method
- *
- * @return void
- */
-	public function testAdminAdd() {
-	}
-
-/**
- * testAdminEdit method
- *
- * @return void
- */
-	public function testAdminEdit() {
-	}
-
-/**
- * testAdminDelete method
- *
- * @return void
- */
-	public function testAdminDelete() {
 	}
 
 }
