@@ -4,6 +4,7 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('transcription_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('dictation_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('dictation_assignment_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('name'); ?></th>
 			<th><?php echo $this->Paginator->sort('location'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
@@ -16,6 +17,9 @@
 		<td><?php echo h($transcription['Transcription']['transcription_id']); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($transcription['Dictation']['name'], array('controller' => 'dictations', 'action' => 'view', $transcription['Dictation']['dictation_id'])); ?>
+		</td>
+		<td>
+			<?php echo $this->Html->link($transcription['Assignment']['dictation_assignment_id'], array('controller' => 'dictation_assignments', 'action' => 'view', $transcription['Assignment']['dictation_assignment_id'])); ?>
 		</td>
 		<td><?php echo h($transcription['Transcription']['name']); ?>&nbsp;</td>
 		<td><?php echo h($transcription['Transcription']['location']); ?>&nbsp;</td>
@@ -50,5 +54,7 @@
 		<li><?php echo $this->Html->link(__('New Transcription'), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('List Dictations'), array('controller' => 'dictations', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Dictation'), array('controller' => 'dictations', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Dictation Assignments'), array('controller' => 'dictation_assignments', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Assignment'), array('controller' => 'dictation_assignments', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

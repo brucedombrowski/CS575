@@ -16,7 +16,8 @@ class DictationTest extends CakeTestCase {
 		'app.dictation',
 		'app.client',
 		'app.user',
-		'app.clients_user',
+		'app.role',
+		'app.dictation_assignment',
 		'app.transcription'
 	);
 

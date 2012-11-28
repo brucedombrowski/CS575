@@ -17,9 +17,7 @@ class DictationAssignmentsControllerTest extends ControllerTestCase {
 		'app.dictation',
 		'app.client',
 		'app.user',
-		'app.role',
-		'app.transcription',
-		'app.dictation_assignment'
+		'app.role'
 	);
 
 /**
@@ -60,46 +58,6 @@ class DictationAssignmentsControllerTest extends ControllerTestCase {
  * @return void
  */
 	public function testDelete() {
-	}
-
-/**
- * testAdminIndex method
- *
- * @return void
- */
-	public function testAdminIndex() {
-	}
-
-/**
- * testAdminView method
- *
- * @return void
- */
-	public function testAdminView() {
-	}
-
-/**
- * testAdminAdd method
- *
- * @return void
- */
-	public function testAdminAdd() {
-	}
-
-/**
- * testAdminEdit method
- *
- * @return void
- */
-	public function testAdminEdit() {
-	}
-
-/**
- * testAdminDelete method
- *
- * @return void
- */
-	public function testAdminDelete() {
 	}
 
 }

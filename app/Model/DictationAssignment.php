@@ -4,6 +4,8 @@ App::uses('AppModel', 'Model');
  * DictationAssignment Model
  *
  * @property Dictation $Dictation
+ * @property AccountManager $AccountManager
+ * @property Transcriptionist $Transcriptionist
  */
 class DictationAssignment extends AppModel {
 
@@ -15,28 +17,11 @@ class DictationAssignment extends AppModel {
 	public $primaryKey = 'dictation_assignment_id';
 
 /**
- * Display field
- *
- * @var string
- */
-	public $displayField = 'dictation_assignment_id';
-
-/**
  * Validation rules
  *
  * @var array
  */
 	public $validate = array(
-		'dictation_assignment_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
 		'dictation_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
@@ -77,26 +62,6 @@ class DictationAssignment extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'created' => array(
-			'datetime' => array(
-				'rule' => array('datetime'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'modified' => array(
-			'datetime' => array(
-				'rule' => array('datetime'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
 	);
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
@@ -114,19 +79,19 @@ class DictationAssignment extends AppModel {
 			'fields' => '',
 			'order' => ''
 		),
-    'AccountManager' => array(
+		'AccountManager' => array(
 			'className' => 'User',
 			'foreignKey' => 'account_manager_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
-    'Transcriptionist' => array(
+		'Transcriptionist' => array(
 			'className' => 'User',
 			'foreignKey' => 'transcriptionist_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-		),
+		)
 	);
 }

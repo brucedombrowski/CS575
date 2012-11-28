@@ -11,6 +11,11 @@
 			<?php echo $this->Html->link($transcription['Dictation']['name'], array('controller' => 'dictations', 'action' => 'view', $transcription['Dictation']['dictation_id'])); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Assignment'); ?></dt>
+		<dd>
+			<?php echo $this->Html->link($transcription['Assignment']['dictation_assignment_id'], array('controller' => 'dictation_assignments', 'action' => 'view', $transcription['Assignment']['dictation_assignment_id'])); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Name'); ?></dt>
 		<dd>
 			<?php echo h($transcription['Transcription']['name']); ?>
@@ -42,5 +47,7 @@
 		<li><?php echo $this->Html->link(__('New Transcription'), array('action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Dictations'), array('controller' => 'dictations', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Dictation'), array('controller' => 'dictations', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Dictation Assignments'), array('controller' => 'dictation_assignments', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Assignment'), array('controller' => 'dictation_assignments', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

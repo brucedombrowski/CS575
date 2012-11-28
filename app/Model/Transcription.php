@@ -4,6 +4,7 @@ App::uses('AppModel', 'Model');
  * Transcription Model
  *
  * @property Dictation $Dictation
+ * @property DictationAssignment $DictationAssignment
  */
 class Transcription extends AppModel {
 
@@ -21,6 +22,16 @@ class Transcription extends AppModel {
  */
 	public $validate = array(
 		'dictation_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'dictation_assignment_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -63,6 +74,13 @@ class Transcription extends AppModel {
 		'Dictation' => array(
 			'className' => 'Dictation',
 			'foreignKey' => 'dictation_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'DictationAssignment' => array(
+			'className' => 'DictationAssignment',
+			'foreignKey' => 'dictation_assignment_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

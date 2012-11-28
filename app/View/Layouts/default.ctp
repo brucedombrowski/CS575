@@ -16,8 +16,7 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
-debug($current_user);
+$cakeDescription = __d('cake_dev', 'Transcription Management System');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -40,7 +39,7 @@ debug($current_user);
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+			<h1><?php echo $this->Html->link($cakeDescription, '/'); ?></h1>
       <div style="text-align: right">
       <?php if ($logged_in) { ?>
         Welcome <?php echo $current_user['name']; ?>
@@ -66,5 +65,6 @@ debug($current_user);
 		</div>
 	</div>
 	<?php echo $this->element('sql_dump'); ?>
+  <?php debug($current_user); ?>
 </body>
 </html>

@@ -1,10 +1,10 @@
-a<?php
+<?php
 App::uses('AppModel', 'Model');
 /**
  * Dictation Model
  *
- * @property Dictation $Dictation
  * @property Client $Client
+ * @property DictationAssignment $DictationAssignment
  * @property Transcription $Transcription
  */
 class Dictation extends AppModel {
@@ -22,6 +22,13 @@ class Dictation extends AppModel {
  * @var string
  */
 	public $displayField = 'name';
+  
+/**
+ * Recursion level
+ *
+ * @var string
+ */
+	public $recursive = 2; 
 
 /**
  * Validation rules
@@ -69,26 +76,6 @@ class Dictation extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'created' => array(
-			'datetime' => array(
-				'rule' => array('datetime'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'modified' => array(
-			'datetime' => array(
-				'rule' => array('datetime'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
 	);
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
@@ -109,11 +96,24 @@ class Dictation extends AppModel {
 	);
 
 /**
- * hasOne associations
+ * hasMany associations
  *
  * @var array
  */
-	public $hasOne = array(
+	public $hasMany = array(
+		'DictationAssignment' => array(
+			'className' => 'DictationAssignment',
+			'foreignKey' => 'dictation_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
 		'Transcription' => array(
 			'className' => 'Transcription',
 			'foreignKey' => 'dictation_id',
@@ -128,27 +128,5 @@ class Dictation extends AppModel {
 			'counterQuery' => ''
 		)
 	);
-
-/**
- * hasOne associations
- *
- * @var array
- */
-	public $hasMany = array(
-		'Assignments' => array(
-			'className' => 'Dictation_assignment',
-			'foreignKey' => 'dictation_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)
-	);  
-    
 
 }

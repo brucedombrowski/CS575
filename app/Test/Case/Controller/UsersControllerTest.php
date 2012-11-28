@@ -18,6 +18,7 @@ class UsersControllerTest extends ControllerTestCase {
 		'app.client',
 		'app.dictation',
 		'app.transcription',
+		'app.dictation_assignment',
 		'app.dictation_assignment'
 	);
 

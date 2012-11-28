@@ -18,7 +18,7 @@ class TranscriptionsControllerTest extends ControllerTestCase {
 		'app.client',
 		'app.user',
 		'app.role',
-		'app.user_role'
+		'app.dictation_assignment'
 	);
 
 /**

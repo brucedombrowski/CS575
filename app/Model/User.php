@@ -21,6 +21,13 @@ class User extends AppModel {
 	public $displayField = 'name';
 
 /**
+ * Recursion level
+ *
+ * @var string
+ */
+	public $recursive = 2;  
+
+/**
  * Validation rules
  *
  * @var array
@@ -115,9 +122,22 @@ class User extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		),
-    'Assignments' => array(
+    'Assigner' => array(
 			'className' => 'DictationAssignment',
-			'foreignKey' => 'user_id',
+			'foreignKey' => 'account_manager_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
+    'Assignee' => array(
+			'className' => 'DictationAssignment',
+			'foreignKey' => 'transcriptionist_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
