@@ -1081,3 +1081,10 @@
 #9 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(DictationAssignmentsController), Object(CakeRequest), Object(CakeResponse))
 #10 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #11 {main}
+2012-11-28 21:25:34 Error: [NotFoundException] Invalid user
+#0 [internal function]: UsersController->view()
+#1 C:\wamp\www\CS575\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\CS575\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\CS575\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
