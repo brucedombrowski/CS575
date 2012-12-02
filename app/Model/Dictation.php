@@ -129,4 +129,46 @@ class Dictation extends AppModel {
 		)
 	);
 
+public function getManagersDictations($manager_id) {
+
+  $this->recursive = 1;
+  return $this->find('all', 
+  array('conditions' => array('Client.manager_id' => $manager_id),
+        'order' => array('Dictation.created ASC')
+    ));
+  }
+  
+public function getManagersUnassignedDictations($manager_id) {
+
+  $dictations = $this->getManagersDictations($manager_id);
+  $unassignedDictations = array();
+  
+  foreach ($dictations as $dictation) {
+    if ($dictation['DictationAssignment'] == NULL ) {
+      $unassignedDictations[] = $dictation;  
+    }
+  }
+  
+  return $unassignedDictations; 
+  
+}
+
+public function getManagersAssignedDictations($manager_id) {
+
+  $dictations = $this->getManagersDictations($manager_id);
+  $assignedDictations = array();
+  
+  foreach ($dictations as $dictation) {
+    if ($dictation['DictationAssignment'] != NULL ) {
+      $assignedDictations[] = $dictation;  
+    }
+  }
+  
+  return $assignedDictations; 
+  
+}  
+
+
+
+
 }
