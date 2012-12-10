@@ -58,4 +58,8 @@ class DashboardController extends AppController {
   
   }
   
+  public function QAAssociate() {
+  
+  }
+  
 }

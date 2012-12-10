@@ -38,7 +38,7 @@ class Dictation extends AppModel {
 	public $validate = array(
 		'dictation_id' => array(
 			'numeric' => array(
-				'rule' => array('numeric'),
+				'rule' => array('uuid'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,

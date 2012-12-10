@@ -175,6 +175,24 @@ class User extends AppModel {
   
     return $this->Role->find('all', array('conditions'=>array('Role.name'=>'Administrator')));
     
+  }
+  
+  public function getTranscriptionists() {
+  
+    return $this->Role->find('all', array('conditions'=>array('Role.name'=>'Transcriptionist')));
+    
+  }  
+
+  public function getQAManagers() {
+  
+    return $this->Role->find('all', array('conditions'=>array('Role.name'=>'QA Manager')));
+    
+  }  
+
+  public function getQAAssociates() {
+  
+    return $this->Role->find('all', array('conditions'=>array('Role.name'=>'QA Associate')));
+    
   }  
   
 }
